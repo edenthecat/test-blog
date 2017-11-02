@@ -3,3 +3,11 @@
 <%= render 'form', article: @article %>
 
 <%= link_to 'Back', articles_path %>
+
+<% content_for(:js) do %>
+  <%= javascript_tag do %>
+    $(function() {
+      $(".demo").text("<%= some_ruby %>");
+    });
+  <% end %>
+<% end %>

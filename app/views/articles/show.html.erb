@@ -1,3 +1,7 @@
+<% content_for(:title_tag) do %>
+  Read <%= @article.title %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -9,6 +13,8 @@
   <strong>Body:</strong>
   <%= @article.body %>
 </p>
+
+<%= link_to "All Articles", articles_path, {class: "btn btn-primary"} %>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
